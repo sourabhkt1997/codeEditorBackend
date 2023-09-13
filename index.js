@@ -1,7 +1,7 @@
 let express=require("express")
 let app=express()
 require("dotenv").config()
-let port=process.env.port
+let port=process.env.PORT || 3000
 app.use(express.json())
 let cors=require("cors")
 app.use(cors())
@@ -23,7 +23,7 @@ app.use("/api",converterRoute)
 
 
 
-app.listen(port,async()=>{
+app.listen(port,"0.0.0.0",async()=>{
    try {
       console.log("server is running")
    } catch (error) {
