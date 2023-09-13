@@ -9,7 +9,7 @@ converterRoute.post("/features",async(req,res)=>{
        let {option}=req.query
        let prompt=""
        if(option=="convert"){
-        prompt=`convert this code ${input} to ${language}.only need the code dont need the explanation.and code should be in line by line and more readable also`
+        prompt=`actlike a codeconvertor.convert this code ${input} to ${language}.only need the code dont need the explanation.and code should be in line by line and more readable also.i dont want any thing other than converted code.`
        }
        if(option=="debug"){
          prompt=`Debug this code ${input}.`
